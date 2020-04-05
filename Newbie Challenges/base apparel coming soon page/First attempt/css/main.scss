@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//VARIABLES
+$colors: (
+    desat-red: hsl(0, 36%, 70%),
+    soft-red: hsl(0, 93%, 68%),
+    dark-grey-red: hsl(0, 6%, 24%),
+    dark-grey-red-s: hsl(0, 100%, 24%)
+);
+
+@function get_color($clr){
+    @return map-get($colors , $clr);
+}
+
+$fs-body: 1em;
+$fs-h1: 2.5rem;
+//for larger screens
+$fs-body-l: 1.5em;
+$fs-h1-l: 2.5em;
+$fs-h1-xl: 3.3em;
+
+$fw-light: 300;
+$fw-reg: 400;
+$fw-bold: 600;
+
+//GENERAL STYLES
+
+html, body{
+    height: 100%;
+    overflow: auto;
+}
+
+body{
+    //background-color: lighten(get_color(soft-red), 30%);
+    background: linear-gradient(315deg, hsl(0, 100%, 98%) 30%, hsl(0, 0%, 100%));
+}
+
+*:focus{
+    outline: none;
+}
+
+//Typography
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $fs-body;
+    font-weight: $fw-reg;
+}
+
+h1{
+    font-size: $fs-h1;
+    font-weight: $fw-bold;
+}
+
+@media (min-width: 600px) and (max-width: 1080px){
+    body{
+        font-size: $fs-body-l;
+    }
+}
+
+@media (min-width: 600px){
+    h1{
+        font-size: $fs-h1-xl;
+    }
+}
+
+//Main styles
+
+@media (min-width: 1080px){
+    body .container{
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(2, auto);
+        height: 100%;
+
+        header{
+            display: flex;
+            align-items: center;
+            padding: 1em 4em;
+            .logo{
+                min-width: 145px;
+            }
+        }
+
+        main{
+            grid-row: 2;
+            grid-column: span 2;
+            flex-direction: row-reverse;
+
+            .hero-image{
+                background: url(../images/hero-desktop.jpg);
+                background-size: cover;
+                flex: 1;
+                margin-top: calc(-4em - 60px);
+                margin-bottom: -1.5em;
+            }
+
+            .main-text{
+                flex: 1;
+                text-align: left;
+                padding: 0em 4em 2em 4em;
+            }
+        }
+
+        footer{
+            grid-row: 3;
+        }
+    }
+}
+
+.container{
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    header{
+        padding: 2em;
+        flex: 0 1 auto;
+        .logo{
+            width: 35%;
+            max-width: 100px;
+        }
+    }
+
+    main{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        .hero-image{
+            background: url(../images/hero-mobile.jpg) no-repeat;
+            background-size: cover;
+            width: 100%;
+            flex: 0 1 250px;
+        }
+
+        //for tablets in portrait orientation(250px is too small)
+        @media (min-width: 755px) and (orientation: portrait) {
+            .hero-image{
+                flex: 0 1 40%;
+            }
+        }
+
+        .main-text{
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 3.3em 2em;
+
+            .main-text__heading{
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+
+                .main-text__heading1{
+                    color: get_color(desat-red);
+                    font-weight: $fw-light;
+                }
+
+                .main-text__heading2{
+                    color: get_color(dark-grey-red);
+                }
+            }
+
+            p{
+                margin-top: 1em;
+                color: get_color(desat-red);
+                font-size: 0.9em;
+                line-height: 1.6em;
+            }
+
+            form{
+                margin-top: 2em;
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                .email-input{
+                    flex: 1 1 auto;
+                    padding: 1.2em;
+                    border-radius: 3em 0 0 3em;
+                    background-color: hsl(0, 100%, 98%);
+                    border: 1px solid get_color(desat-red);
+                    color: darken(get_color(desat-red), 20%);
+                }
+
+                ::placeholder{
+                    opacity: 0.5;
+                    color: get_color(desat-red);
+                    font-size: 0.9em;
+                }
+
+                .btn{
+                    z-index: 3;
+                    flex: 0 1 5em;
+                    border-radius: 3em;
+                    background: linear-gradient(315deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+                    margin-left: -3em;
+                    box-shadow: 0 1em 1.5em rgba(get_color(dark-grey-red-s), 0.15);
+                }
+
+                @media (min-width: 600px) and (orientation: portrait) {
+                    .btn{
+                        flex: 0 1 8em;
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+
+        //for vertical center, and height=20px
+        flex: 0 1 25px;
+        padding: 0.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //------------------------------------
+
+        color: #aaa;
+        font-size: 0.7em;
+
+        a{
+            transition: 0.5s;
+            text-decoration: none;
+            color: lighten(get_color(soft-red), 20%);
+
+            &:hover{
+                color: lighten(#00f, 20%);
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="lft-mg"></div>
+    <header>
+      <img src="images/logo.svg" alt="Logo" class="logo">
+    </header>
+
+    <div class="hero-image"></div>
+
+    <section class="main-text">
+      <div class="mt-inner">
+        <h1 class="main-text__heading">
+          <span class="main-text__heading1">We're</span><br><span class="main-text__heading2">coming<br>soon</span>
+        </h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form action="whatver.script" novalidate>
+          <input type="email" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" class="email-input" id="email" placeholder="Email Address">
+          <button class="btn" id='validate'>
+            <img src="images/icon-arrow.svg" alt="arrow">
+          </button>
+          <img src="images/icon-error.svg" alt="error" class="errico">
+        </form>
+        <p id="result"></p>
+      </div>
+    </section>
+    
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/1Hibiki1" target="_blank">Hibiki</a>.
+      </p>
+    </footer>
+
+  </div> <!--end container-->
+
+  <!--JQuery email validation-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    function validate() {
+      var $result = $("#result");
+      var email = $("#email").val();
+      $result.text("");
+
+      if (!validateEmail(email)) {
+        $result.text("Please provide a valid email");
+        $(".errico").css("visibility", "visible");
+        $("#email").css("border", "2px solid hsl(0, 60%, 75%)");
+      }else{
+        $(".errico").css("visibility", "hidden");
+        $("#email").css("border", "1px solid hsl(0, 36%, 70%)");
+      }
+      return false;
+    }
+
+    $("#validate").on("click", validate);
+  </script>
+
+</body>
+</html>
