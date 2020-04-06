@@ -100,7 +100,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 3.3em 2em;
+  padding: 13em 2em;
   position: relative;
 }
 
@@ -207,7 +207,7 @@ h1 {
 
 @media (device-width: 568px) and (device-height: 320px) {
   .container .main-text form .errico {
-    margin-left: -7.5em;
+    margin-left: -4em;
   }
 }
 
@@ -222,7 +222,7 @@ h1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25px;
           flex: 0 1 25px;
-  padding: 0.2em;
+  padding: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +250,7 @@ h1 {
 @media (min-width: 1024px) and (orientation: landscape) {
   body .container {
     background: url(../images/bg-pattern-desktop.svg);
-    background-size: 59% 100%;
+    background-size: cover;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "lm hdr img" "lm maintxt img" "fotr fotr img";

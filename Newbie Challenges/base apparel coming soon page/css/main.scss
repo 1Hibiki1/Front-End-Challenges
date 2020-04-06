@@ -106,8 +106,8 @@ h1{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding: 3.3em 2em;
-        //position: relative;
+        padding: 13em 2em;
+        position: relative;
 
         .main-text__heading{
             text-transform: uppercase;
@@ -181,7 +181,7 @@ h1{
             //iphone 5/5s/SE in landscape
             @media (device-width: 568px) and (device-height: 320px){
                 .errico{
-                    margin-left: -7.5em;
+                    margin-left: -4em;
                 }
             }
         }
@@ -190,7 +190,7 @@ h1{
             color: lighten(get_color(soft-red), 10%);
             font-size: 0.8rem;
             padding: 0 2em;
-            //position: absolute;
+            position: absolute;
         }
     }
 
@@ -198,7 +198,7 @@ h1{
 
         //for vertical center, and height=20px
         flex: 0 1 25px;
-        padding: 0.2em;
+        padding: 2em 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -223,7 +223,7 @@ h1{
 @media (min-width: 1024px) and (orientation: landscape){
     body .container{
         background: url(../images/bg-pattern-desktop.svg);
-        background-size: 59% 100%;
+        background-size: cover;
         display: grid;
         grid-template-areas: 
             "lm hdr img"
