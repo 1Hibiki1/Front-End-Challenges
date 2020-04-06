@@ -107,7 +107,7 @@ h1{
         justify-content: center;
         text-align: center;
         padding: 3.3em 2em;
-        position: relative;
+        //position: relative;
 
         .main-text__heading{
             text-transform: uppercase;
@@ -190,7 +190,7 @@ h1{
             color: lighten(get_color(soft-red), 10%);
             font-size: 0.8rem;
             padding: 0 2em;
-            position: absolute;
+            //position: absolute;
         }
     }
 
