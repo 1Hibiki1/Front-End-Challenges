@@ -104,12 +104,6 @@ h1 {
   position: relative;
 }
 
-@media (min-width: 600px) {
-  .container .main-text .main-text {
-    padding: 3.3em 2em;
-  }
-}
-
 .container .main-text .main-text__heading {
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -251,6 +245,12 @@ h1 {
 
 .container footer a:hover {
   color: #6666ff;
+}
+
+@media (min-width: 600px) {
+  body .comtainer .main-text {
+    padding: 3.3em 2em;
+  }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {

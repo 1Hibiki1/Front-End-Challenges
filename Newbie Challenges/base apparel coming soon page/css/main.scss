@@ -107,11 +107,6 @@ h1{
         justify-content: center;
         text-align: center;
         padding: 13em 2em;
-        @media (min-width: 600px){
-            .main-text{
-                padding: 3.3em 2em;
-            }
-        }
         position: relative;
 
         .main-text__heading{
@@ -221,6 +216,13 @@ h1{
                 color: lighten(#00f, 20%);
             }
         }
+    }
+}
+
+//tablet
+@media (min-width: 600px){
+    body .comtainer .main-text{
+        padding: 3.3em 2em;
     }
 }
 
