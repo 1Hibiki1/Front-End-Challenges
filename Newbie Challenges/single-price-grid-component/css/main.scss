@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;    
+}
+
+//Variables
+$clr-cyan: hsl(179, 62%, 43%);
+$clr-b-yellow: hsl(71, 73%, 54%);
+$clr-l-grey: hsl(204, 43%, 93%);
+$clr-grey-blue: hsl(218, 22%, 67%);
+
+$fw-bold: 700;
+$fw-reg: 400;
+
+$fs-h1: 1.2rem;
+$fs-h2: 1.2rem;
+$fs-body: 0.85rem;
+
+$fs-h1-l: 1.4rem;
+$fs-h2-l: 1rem;
+$fs-body-l: 0.85rem;
+
+$b-radius: 0.5em;
+
+//General styles
+html,body{
+    height: 100%;
+}
+
+body{
+    background: $clr-l-grey;
+}
+
+a{
+    color: $clr-grey-blue;
+    text-decoration: none;
+}
+
+//typography
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: $fs-body;
+}
+
+h1{
+    font-size: $fs-h1;
+}
+
+h2{
+    font-size: $fs-h2;
+}
+
+@media (min-width: 600px){
+    body{
+        font-size: $fs-body-l;
+    }
+    
+    h1{
+        font-size: $fs-h1-l;
+    }
+    
+    h2{
+        font-size: $fs-h2-l;
+    }
+}
+
+//Main styles
+.container{
+    height: 100%;
+    padding: 3.7em 2.5em;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    .price-component{
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        height: 100%;
+        box-shadow: 0 1em 2.5em rgba(#000, 0.15);
+        background: $clr-l-grey;
+
+        .price-comp__join{
+            background: #fff;
+            border-radius: $b-radius $b-radius 0 0;
+            padding: 2em 1.5em;
+
+            .join__heading{
+                color: $clr-cyan;
+            }
+            .join__grnt{
+                color: $clr-b-yellow;
+                margin-top: 1.5em;
+            }
+            .join__desc{
+                color: $clr-grey-blue;
+                margin-top: 1.5em;
+                line-height: 1.9em;
+            }
+        }
+
+        .price-comp__price{
+            background: $clr-cyan;
+            padding: 2em 1.5em;
+            .price__heading{
+                color: $clr-l-grey;
+            }
+            .price{
+                .price__amt{
+                    color: #fff;
+                    font-size: 2rem;
+                }
+                margin-top: 1.3em;
+                color: lighten($clr-cyan, 20%);
+            }
+            .price__desc{
+                color: lighten($clr-cyan, 40%);
+                margin-top: 0.8em;
+                font-size: 1rem;
+            }
+            .btn-form{
+                margin-top: 2em;
+                .btn{
+                    width: 100%;
+                    background: $clr-b-yellow;
+                    color: #fff;
+                    padding: 0.9em 0;
+                    text-align: center;
+                    border-radius: 0.3em;
+                    font-size: 1rem;
+                    font-weight: $fw-bold;
+                    box-shadow: 0 0.3em 1em rgba(#000, 0.2);
+                }
+            }
+        }
+
+        .price-comp__why{
+            background: lighten($clr-cyan, 5%);
+            border-radius: 0 0 $b-radius $b-radius;
+            padding: 2em 1.5em;
+            color: #fff;
+            .why__desc{
+                color: lighten($clr-cyan, 40%);
+                margin-top: 1.5em;
+                line-height: 1.55em;
+                padding-right: 5em;
+            }
+        }
+    }
+
+    footer{
+        margin-top: 1em;
+        padding: 1em 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 800px){
+    body .container{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 650px;
+        position: relative;
+        .price-component{
+            width: 60%;
+            height: 60%;
+            min-height: 450px;
+            min-width: 600px;
+            display: grid;
+            grid-template: 1fr 1fr/ 1fr 1fr;
+            .price-comp__join{
+                grid-column: span 2;
+                padding: 2.5em;
+                .join__desc{
+                    margin-top: 0.8em;
+                }
+            }
+            .price-comp__price{
+                border-radius: 0 0 0 $b-radius;
+                padding: 2.5em;
+                .price__desc{
+                    font-size: $fs-body-l;
+                }
+            }
+            .price-comp__why{
+                border-radius: 0 0 $b-radius 0;
+                padding: 2.5em;
+                .why__desc{
+                    padding-right: 2em;
+                }
+            }
+        }
+        @media (orientation: portrait){
+            .price-component{
+                max-height: 600px;
+            }
+        }
+        @media (max-width: 2000px){
+            .price-component{
+                max-width: 600px;
+            }
+        }
+        footer{
+            position: absolute;
+            bottom: 0;right: 0;left: 0;
+        }
+    }
+}
