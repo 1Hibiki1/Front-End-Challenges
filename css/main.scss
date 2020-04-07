@@ -64,7 +64,6 @@ h3{
 
 //Main styles
 .container{
-    width: 100%;
     height: 100%;
 
     //grid to keep footer at bottom
@@ -141,15 +140,19 @@ h3{
 
                 //Card preview images
                 .card__proj-prvw-4cfs{
-                    background: url(../images/4-card-feature-section.png);
+                    background: url(../images/4-card-feature-section.png) no-repeat center center;
                     background-size: cover;
                 }
                 .card__proj-prvw-bacs{
-                    background: url(../images/base-apparel-coming-soon.png);
+                    background: url(../images/base-apparel-coming-soon.png) no-repeat center center;
                     background-size: cover;
                 }
                 .card__proj-prvw-hlp{
-                    background: url(../images/huddle-landing-page.png);
+                    background: url(../images/huddle-landing-page.png) no-repeat center center;
+                    background-size: cover;
+                }
+                .card__proj-prvw-spgc{
+                    background: url(../images/single-price-grid-component.png) no-repeat center center;
                     background-size: cover;
                 }
                 //-------------------
