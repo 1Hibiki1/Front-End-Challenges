@@ -177,8 +177,8 @@ h1{
                 visibility: hidden;
             }
 
-            //iphone 5/5s/SE in landscape
-            @media (device-width: 568px) and (device-height: 320px){
+            //iphone 5/5s/SE in landscape (device-width: 568px) and (device-height: 320px)
+            @media (orientation: landscape){
                 .errico{
                     margin-left: -4em;
                 }

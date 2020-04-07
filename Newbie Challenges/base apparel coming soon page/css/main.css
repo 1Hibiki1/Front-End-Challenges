@@ -196,7 +196,7 @@ h1 {
   visibility: hidden;
 }
 
-@media (device-width: 568px) and (device-height: 320px) {
+@media (orientation: landscape) {
   .container .main-text form .errico {
     margin-left: -4em;
   }
