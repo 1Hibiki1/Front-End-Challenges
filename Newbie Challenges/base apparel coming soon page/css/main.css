@@ -170,8 +170,8 @@ h1 {
   z-index: 3;
   height: 3.9em;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 5em;
-          flex: 0 1 5em;
+      -ms-flex: 0 1 6em;
+          flex: 0 1 6em;
   border-radius: 3em;
   background: linear-gradient(315deg, #ee8c8c, #f8bfbf);
   margin-left: -3em;
