@@ -31,7 +31,7 @@
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
         <form action="whatver.script" novalidate>
-          <input aria-label="email-input" type="email" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" class="email-input" id="email" placeholder="Email Address">
+          <input type="email" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" class="email-input" id="email" placeholder="Email Address">
           <button class="btn" id='validate'>
             <img src="images/icon-arrow.svg" alt="arrow">
           </button>
@@ -67,6 +67,7 @@
         $result.text("Please provide a valid email");
         $(".errico").css("visibility", "visible");
         $("#email").css("border", "2px solid hsl(0, 60%, 75%)");
+        $("#validate").css("height", "4em");
       }else{
         $(".errico").css("visibility", "hidden");
         $("#email").css("border", "1px solid hsl(0, 36%, 70%)");
