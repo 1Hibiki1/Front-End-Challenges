@@ -47,7 +47,6 @@ body {
 
 .container {
   height: 100%;
-  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto)[5];
