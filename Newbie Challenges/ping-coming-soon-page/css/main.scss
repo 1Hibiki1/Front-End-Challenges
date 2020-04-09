@@ -1,0 +1,254 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//variables
+$clr-blue: hsl(223, 87%, 63%);
+$clr-pale-blue: hsl(223, 100%, 88%);
+$clr-light-red: hsl(354, 100%, 66%);
+$clr-grey: hsl(0, 0%, 59%);
+$clr-dark-blue: hsl(209, 33%, 12%);
+
+$fw-light: 300;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+$fs-body: 0.8rem;
+$fs-h1: 1.5rem;
+$fs-h1-l: 2rem;
+
+//general styles
+html,body{
+    height: 100%;
+}
+
+body{
+    background: #fff;
+    color: $clr-grey;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+:focus{
+    outline: none;
+}
+
+//typography
+body{
+    font-size: $fs-body;
+
+    h1{
+        font-size: $fs-h1;
+    }
+}
+
+@media (min-width: 700px){
+    body h1{
+        font-size: $fs-h1-l;
+    }
+}
+
+//main styles
+
+.wrapper{
+    height: 100%;
+    padding: 0 1em;
+    .container{
+        height: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-rows: auto auto 1fr auto;
+        padding: 1em 0;
+        max-width: 600px;
+
+        header{
+            padding: 1.5em;
+            display: flex;
+            justify-content: center;
+            .logo{
+                width: 20%;
+                max-width: 65px;
+            }
+        }
+
+        .main-text{
+            text-align: center;
+            padding: 1.5em;
+
+            .main-text__heading{
+                font-weight: $fw-light;
+                .em{
+                    font-weight: $fw-bold;
+                    color: #000;
+                }
+            }
+
+            .main-text__desc{
+                color: #000;
+                margin-top: 1.5em;
+            }
+
+            .main-text__form{
+                margin-top: 3em;
+                display: flex;
+                flex-direction: column;
+                .input-wrapper{
+                    .main-text__form-input{
+                        width: 100%;
+                        padding: 1em 2.3em;
+                        border: 1px solid $clr-blue;
+                        border-radius: 3em;
+                    }
+                    .main-text__form-input::placeholder{
+                        font-weight: $fw-light;
+                        color: $clr-grey;
+                        opacity: 0.3;
+                    }
+                    .error-message{
+                        display: none;
+                        color: darken($clr-light-red, 25%);
+                        font-style: italic;
+                        font-size: 0.6rem;
+                        margin-top: 0.5em;
+                        margin-bottom: 2em;
+                    }
+                }
+                .main-text__form-button{
+                    margin-top: 0.75em;
+                    padding: 1em;
+                    text-align: center;
+                    background: $clr-blue;
+                    color: #fff;
+                    border-radius: 3em;
+                    box-shadow: 0 0.7em 1em rgba($clr-pale-blue, 0.4);
+                }
+            }
+        }
+
+        .hero{
+            padding: 4em 0;
+            img{
+                max-width: 100%;
+            }
+        }
+        footer{
+            padding: 1.5em 0 0 0;
+            text-align: center;
+            .footer__sm-list{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                .footer__sm-list-item{
+                    margin: 0.5em;
+                    border: 1px solid rgba($clr-grey, 0.5);
+                    border-radius: 50%;
+                    padding: 0.5em;
+                    width: 2.8em;
+                    height: 2.8em;
+                    color: $clr-blue;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .footer__sm-list-link{
+                        padding: 0.5em;
+                        font-size: 1rem;
+                        color: inherit;
+                    }
+                }
+            }
+            .copy{
+                margin-top: 2em;
+                font-size: 0.7rem;
+            }
+            .attribution{
+                font-size: 0.7rem;
+                margin-top: 2em;
+                a{
+                    text-decoration: none;
+                    color: $clr-blue;
+                    &:hover{
+                        color: $clr-light-red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 700px){
+    body .wrapper{
+        padding: 0;
+        min-width: 600px;
+        min-height: 700px;
+        .container{
+            width: 60%;
+            max-width: 600px;
+            margin: 0 auto;
+            header{
+                padding: 2em 0;
+                .logo{
+                    width: 11%;
+                    max-width: 60px;
+                }
+            }
+            .main-text{
+                padding: 0 0 1.5em 0;
+                .main-text__desc{
+                    margin-top: 1em;
+                }
+                .main-text__form{
+                    flex-direction: row;
+                    margin-top: 2em;
+                    .input-wrapper{
+                        flex: 1;
+                        position: relative;
+                        .error-message{
+                            position: absolute;
+                            left: 3em;
+                        }
+                    }
+                    .main-text__form-button{
+                        margin-top: 0;
+                        margin-left: 0.7em;
+                        flex: 0 1 auto;
+                        padding-left: 4em;
+                        padding-right: 4em;
+                        cursor: pointer;
+                        transition: background 0.2s;
+
+                        &:hover{
+                            background: lighten($clr-blue, 7%);
+                        }
+                    }
+                }
+            }
+            .hero{
+                padding: 3em 0 2em 0;
+            }
+            footer{
+                padding-bottom: 1em;
+                .footer__sm-list{
+                    .footer__sm-list-item{
+                        width: 2.2em;
+                        height: 2.2em;
+                        .footer__sm-list-link{
+                            font-size: 0.8rem;
+                        }
+
+                        &:hover{
+                            background: $clr-blue;
+                            color: #fff;
+                        }
+                    }
+                }
+            }       
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Ping</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="container">
+      <header>
+        <img src="images/logo.svg" alt="logo" class="logo">
+      </header>
+
+      <section class="main-text">
+        <h1 class="main-text__heading">We are launching <span class="em">soon!</span></h1>
+        <p class="main-text__desc">Subscribe and get notified</p>
+        <form action="#" class="main-text__form" name="form1" novalidate>
+          <div class="input-wrapper">
+            <input type="text" id="email" name="email_inp" class="main-text__form-input" placeholder="Your email address...">
+            <p class="error-message" id="error">Please provide a valid email address</p>
+          </div>
+          <button type="button" class="main-text__form-button" onclick="ValidateEmail(document.form1.email_inp);">Notify Me</button>
+        </form>
+      </section>
+
+      <div class="hero">
+        <img src="images/illustration-dashboard.png" alt="">
+      </div>
+
+      <footer>
+        <ul class="footer__sm-list">
+          <li class="footer__sm-list-item"><a href="#" class="footer__sm-list-link" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="footer__sm-list-item"><a href="#" class="footer__sm-list-link" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+          <li class="footer__sm-list-item"><a href="#" class="footer__sm-list-link" aria-label="insta"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Hibiki</a>.
+        </p>
+      </footer>
+    </div><!--container-->
+
+  </div><!--wrapper-->
+
+  <script>
+    function ValidateEmail(inputText){
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat)){
+        document.getElementById("error").style.display = "none";
+        document.getElementById("email").style.border = "1px solid hsl(223, 87%, 63%)";
+        return true;
+      }
+      else{
+        document.getElementById("error").style.display = "block";
+        document.getElementById("email").style.border = "1px solid #d10015";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

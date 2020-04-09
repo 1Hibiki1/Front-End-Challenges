@@ -1,0 +1,294 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #969696;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  font-size: 0.8rem;
+}
+
+body h1 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  body h1 {
+    font-size: 2rem;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0 1em;
+}
+
+.wrapper .container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: auto auto 1fr auto;
+      grid-template-rows: auto auto 1fr auto;
+  padding: 1em 0;
+  max-width: 600px;
+}
+
+.wrapper .container header {
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container header .logo {
+  width: 20%;
+  max-width: 65px;
+}
+
+.wrapper .container .main-text {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.wrapper .container .main-text .main-text__heading {
+  font-weight: 300;
+}
+
+.wrapper .container .main-text .main-text__heading .em {
+  font-weight: 700;
+  color: #000;
+}
+
+.wrapper .container .main-text .main-text__desc {
+  color: #000;
+  margin-top: 1.5em;
+}
+
+.wrapper .container .main-text .main-text__form {
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .main-text__form-input {
+  width: 100%;
+  padding: 1em 2.3em;
+  border: 1px solid #4f7df3;
+  border-radius: 3em;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .main-text__form-input::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #969696;
+  opacity: 0.3;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .main-text__form-input:-ms-input-placeholder {
+  font-weight: 300;
+  color: #969696;
+  opacity: 0.3;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .main-text__form-input::-ms-input-placeholder {
+  font-weight: 300;
+  color: #969696;
+  opacity: 0.3;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .main-text__form-input::placeholder {
+  font-weight: 300;
+  color: #969696;
+  opacity: 0.3;
+}
+
+.wrapper .container .main-text .main-text__form .input-wrapper .error-message {
+  display: none;
+  color: #d10015;
+  font-style: italic;
+  font-size: 0.6rem;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.wrapper .container .main-text .main-text__form .main-text__form-button {
+  margin-top: 0.75em;
+  padding: 1em;
+  text-align: center;
+  background: #4f7df3;
+  color: #fff;
+  border-radius: 3em;
+  -webkit-box-shadow: 0 0.7em 1em rgba(194, 211, 255, 0.4);
+          box-shadow: 0 0.7em 1em rgba(194, 211, 255, 0.4);
+}
+
+.wrapper .container .hero {
+  padding: 4em 0;
+}
+
+.wrapper .container .hero img {
+  max-width: 100%;
+}
+
+.wrapper .container footer {
+  padding: 1.5em 0 0 0;
+  text-align: center;
+}
+
+.wrapper .container footer .footer__sm-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container footer .footer__sm-list .footer__sm-list-item {
+  margin: 0.5em;
+  border: 1px solid rgba(150, 150, 150, 0.5);
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 2.8em;
+  height: 2.8em;
+  color: #4f7df3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container footer .footer__sm-list .footer__sm-list-item .footer__sm-list-link {
+  padding: 0.5em;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.wrapper .container footer .copy {
+  margin-top: 2em;
+  font-size: 0.7rem;
+}
+
+.wrapper .container footer .attribution {
+  font-size: 0.7rem;
+  margin-top: 2em;
+}
+
+.wrapper .container footer .attribution a {
+  text-decoration: none;
+  color: #4f7df3;
+}
+
+.wrapper .container footer .attribution a:hover {
+  color: #ff5263;
+}
+
+@media (min-width: 700px) {
+  body .wrapper {
+    padding: 0;
+    min-width: 600px;
+    min-height: 700px;
+  }
+  body .wrapper .container {
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  body .wrapper .container header {
+    padding: 2em 0;
+  }
+  body .wrapper .container header .logo {
+    width: 11%;
+    max-width: 60px;
+  }
+  body .wrapper .container .main-text {
+    padding: 0 0 1.5em 0;
+  }
+  body .wrapper .container .main-text .main-text__desc {
+    margin-top: 1em;
+  }
+  body .wrapper .container .main-text .main-text__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 2em;
+  }
+  body .wrapper .container .main-text .main-text__form .input-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+  }
+  body .wrapper .container .main-text .main-text__form .input-wrapper .error-message {
+    position: absolute;
+    left: 3em;
+  }
+  body .wrapper .container .main-text .main-text__form .main-text__form-button {
+    margin-top: 0;
+    margin-left: 0.7em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    padding-left: 4em;
+    padding-right: 4em;
+    cursor: pointer;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+  }
+  body .wrapper .container .main-text .main-text__form .main-text__form-button:hover {
+    background: #7096f5;
+  }
+  body .wrapper .container .hero {
+    padding: 3em 0 2em 0;
+  }
+  body .wrapper .container footer {
+    padding-bottom: 1em;
+  }
+  body .wrapper .container footer .footer__sm-list .footer__sm-list-item {
+    width: 2.2em;
+    height: 2.2em;
+  }
+  body .wrapper .container footer .footer__sm-list .footer__sm-list-item .footer__sm-list-link {
+    font-size: 0.8rem;
+  }
+  body .wrapper .container footer .footer__sm-list .footer__sm-list-item:hover {
+    background: #4f7df3;
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=main.css.map */
