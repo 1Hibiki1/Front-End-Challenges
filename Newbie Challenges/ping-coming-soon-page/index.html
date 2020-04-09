@@ -24,10 +24,11 @@
         <p class="main-text__desc">Subscribe and get notified</p>
         <form action="#" class="main-text__form" name="form1" novalidate>
           <div class="input-wrapper">
-            <input type="text" id="email" name="email_inp" class="main-text__form-input" placeholder="Your email address...">
+            <input type="text" aria-label="email" id="email" name="email_inp" class="main-text__form-input" placeholder="Your email address...">
             <p class="error-message" id="error">Please provide a valid email address</p>
           </div>
           <button type="button" class="main-text__form-button" onclick="ValidateEmail(document.form1.email_inp);">Notify Me</button>
+          <input type="submit" style="display: none" aria-label="submit" value="">
         </form>
       </section>
 
