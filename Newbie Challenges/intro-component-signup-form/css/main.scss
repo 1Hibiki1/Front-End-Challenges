@@ -1,0 +1,218 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//variables
+$clr-red: hsl(0, 100%, 74%);
+$clr-green: hsl(154, 59%, 51%);
+$clr-blue: hsl(248, 32%, 49%);
+$clr-dark-blue: hsl(249, 10%, 26%);
+$clr-grey-blue: hsl(246, 25%, 77%);
+
+$fw-light: 400;
+$fw-reg: 500;
+$fw-s-bold: 600;
+$fw-bold: 700;
+
+$fs-h1: 1.7rem;
+$fs-body: 1rem;
+//larger screens
+$fs-h1-l: 2.7rem;
+$fs-body-l: 1rem;
+
+$mw-breakpoint: 600px;
+
+//general styles
+html,body{
+    height: 100%;
+}
+
+body{
+    background: url(../images/bg-intro-mobile.png) repeat-y center center;
+    background-color: $clr-red;
+    color: #fff;
+}
+
+@media (min-width: $mw-breakpoint){
+    body{
+        background: url(../images/bg-intro-desktop.png);
+        background-color: $clr-red;
+        color: #fff;
+    }
+}
+
+:focus{
+    outline: none;
+}
+
+::placeholder{
+    font-weight: $fw-s-bold;
+}
+
+//typography
+body{
+    font-size: $fs-body;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: $fs-h1;
+}
+
+@media (min-width: 1024px){
+    body{
+        font-size: $fs-body-l;
+    }
+    
+    h1{
+        font-size: $fs-h1-l;
+    }
+}
+
+//main styles
+.container{
+    height: 100%;
+    .main-text{
+        padding: 4em 2em;
+        text-align: center;
+        .main-text__heading{
+            line-height: 1.3em;
+        }
+        .main-text__desc{
+            color: lighten($clr-grey-blue, 15%);
+            margin-top: 2em;
+        }
+        .attribution-dt{
+            display: none;
+        }
+    }
+    .main-form{
+        text-align: center;
+        padding: 0 2em 4em 2em;
+        .form-title{
+            width: 100%;
+            padding: 1em;
+            background: $clr-blue;
+            border-radius: 0.6em;
+            box-shadow: 0 0.5em 0 rgba(#000, 0.15);
+        }
+        form{
+            width: 100%;
+            background: #fff;
+            color: $clr-dark-blue;
+            margin-top: 1.5em;
+            padding: 1.5em 1.2em;
+            border-radius: 0.6em;
+            box-shadow: 0 0.5em 0 rgba(#000, 0.15);
+            .inp-wrapper{
+                position: relative;
+                margin-bottom: 1.2em;
+                input{
+                    border: 1px solid $clr-grey-blue;
+                    padding: 1.3em 1em;
+                    text-align-last: left;
+                    width: 100%;
+                    border-radius: 0.4em;
+                }
+                .errico{
+                    position: absolute;
+                    width: 1.5em;
+                    height: 1.5em;
+                    right: 0.8em;
+                    top: 0.8em;
+                    display: none;
+                }
+                .err-msg{
+                    color: $clr-red;
+                    font-size: 0.75rem;
+                    text-align: left;
+                    font-style: italic;
+                    display: none;
+                }
+            }
+            button{
+                width: 100%;
+                color: #fff;
+                padding: 1em 0;
+                background: $clr-green;
+                text-transform: uppercase;
+                border-bottom: 3px solid darken($clr-green, 10%);
+                border-radius: 0.4em;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+            .form-footer{
+                color: lighten($clr-grey-blue, 5%);
+                font-size: 0.65rem;
+                margin-top: 1.2em;
+                padding: 0 2em;
+                a{
+                    color: $clr-red;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    footer{
+        font-size: 0.6rem;
+        text-align: center;
+        padding: 0.3em 0;
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+
+//desktop
+@media (min-width: 1024px) and (orientation: landscape){
+    body .container{
+        position: relative;
+        min-height: 700px;
+        display: grid;
+        grid-template-areas: 
+            "mt frm";
+            //"ftr ftr";
+        justify-items: center;
+        align-items: center;
+
+        grid-template-columns: repeat(2, 1fr);
+        //grid-template-rows: repeat(2, auto);
+
+        .main-text{
+            grid-area: mt;
+            text-align: left;
+            padding-right: 0;
+            width: 80%;
+        }
+
+        .main-form{
+            grid-area: frm;
+            width: 80%;
+            padding: 0;
+            margin-left: 1em;
+            justify-self: start;
+            form{
+                .inp-wrapper{
+                    .err-msg{
+                        text-align: right;
+                        margin-top: 0.5em;
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+
+        footer{
+            //grid-area: ftr;
+            display: block;
+            position: absolute;
+            bottom: 1em;
+        }
+    }
+}

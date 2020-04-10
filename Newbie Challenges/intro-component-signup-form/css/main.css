@@ -1,0 +1,222 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(../images/bg-intro-mobile.png) repeat-y center center;
+  background-color: #ff7a7a;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url(../images/bg-intro-desktop.png);
+    background-color: #ff7a7a;
+    color: #fff;
+  }
+}
+
+:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 600;
+}
+
+:-ms-input-placeholder {
+  font-weight: 600;
+}
+
+::-ms-input-placeholder {
+  font-weight: 600;
+}
+
+::placeholder {
+  font-weight: 600;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+}
+
+.container {
+  height: 100%;
+}
+
+.container .main-text {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.container .main-text .main-text__heading {
+  line-height: 1.3em;
+}
+
+.container .main-text .main-text__desc {
+  color: #e7e6f0;
+  margin-top: 2em;
+}
+
+.container .main-text .attribution-dt {
+  display: none;
+}
+
+.container .main-form {
+  text-align: center;
+  padding: 0 2em 4em 2em;
+}
+
+.container .main-form .form-title {
+  width: 100%;
+  padding: 1em;
+  background: #6055a5;
+  border-radius: 0.6em;
+  -webkit-box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.15);
+}
+
+.container .main-form form {
+  width: 100%;
+  background: #fff;
+  color: #3e3c49;
+  margin-top: 1.5em;
+  padding: 1.5em 1.2em;
+  border-radius: 0.6em;
+  -webkit-box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.15);
+}
+
+.container .main-form form .inp-wrapper {
+  position: relative;
+  margin-bottom: 1.2em;
+}
+
+.container .main-form form .inp-wrapper input {
+  border: 1px solid #b9b6d3;
+  padding: 1.3em 1em;
+  text-align-last: left;
+  width: 100%;
+  border-radius: 0.4em;
+}
+
+.container .main-form form .inp-wrapper .errico {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  right: 0.8em;
+  top: 0.8em;
+  display: none;
+}
+
+.container .main-form form .inp-wrapper .err-msg {
+  color: #ff7a7a;
+  font-size: 0.75rem;
+  text-align: left;
+  font-style: italic;
+  display: none;
+}
+
+.container .main-form form button {
+  width: 100%;
+  color: #fff;
+  padding: 1em 0;
+  background: #38cc8c;
+  text-transform: uppercase;
+  border-bottom: 3px solid #2ba671;
+  border-radius: 0.4em;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.container .main-form form .form-footer {
+  color: #c8c6dd;
+  font-size: 0.65rem;
+  margin-top: 1.2em;
+  padding: 0 2em;
+}
+
+.container .main-form form .form-footer a {
+  color: #ff7a7a;
+  text-decoration: none;
+}
+
+.container footer {
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 0.3em 0;
+}
+
+.container footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  body .container {
+    position: relative;
+    min-height: 700px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "mt frm";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  body .container .main-text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: mt;
+    text-align: left;
+    padding-right: 0;
+    width: 80%;
+  }
+  body .container .main-form {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: frm;
+    width: 80%;
+    padding: 0;
+    margin-left: 1em;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  body .container .main-form form .inp-wrapper .err-msg {
+    text-align: right;
+    margin-top: 0.5em;
+    font-size: 0.6rem;
+  }
+  body .container footer {
+    display: block;
+    position: absolute;
+    bottom: 1em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
