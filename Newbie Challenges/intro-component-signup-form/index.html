@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
-  <script type="text/javascript" src="js/validate.js"></script>
+  <script src="js/validate.js"></script>
   
   <title>Intro component with sign up form</title>
 </head>
@@ -31,25 +31,25 @@
 
       <form action="#" name="main-form" id="main-form" onsubmit="return Validate()">
         <div class="inp-wrapper">
-          <input type="text" placeholder="First Name" name="first_name" id="first_name">
+          <input type="text" placeholder="First Name" name="first_name" id="first_name" aria-label="first_name">
           <img src="images/icon-error.svg" alt="error" class="errico" id="errico-fn">
           <p class="err-msg" id="err-msg-fn">First Name cannot be empty</p>
         </div>
 
         <div class="inp-wrapper">
-          <input type="text" placeholder="Last Name" name="last_name" id="last_name">
+          <input type="text" placeholder="Last Name" name="last_name" id="last_name" aria-label="last_name">
           <img src="images/icon-error.svg" alt="error" class="errico" id="errico-ln">
           <p class="err-msg" id="err-msg-ln">Last Name cannot be empty</p>
         </div>
 
         <div class="inp-wrapper">
-          <input type="text" placeholder="Email Address" name="email_input" id="email_input">
+          <input type="text" placeholder="Email Address" name="email_input" id="email_input" aria-label="email_input">
           <img src="images/icon-error.svg" alt="error" class="errico" id="errico-email">
           <p class="err-msg" id="err-msg-email">Looks like this is not an email</p>
         </div>
 
         <div class="inp-wrapper">
-          <input type="text" placeholder="Password" name="password_input" id="password_input">
+          <input type="text" placeholder="Password" name="password_input" id="password_input" aria-label="password_input">
           <img src="images/icon-error.svg" alt="error" class="errico" id="errico-pwd">
           <p class="err-msg" id="err-msg-pwd">Password cannot be empty</p>
         </div>
