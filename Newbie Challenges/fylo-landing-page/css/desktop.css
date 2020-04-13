@@ -1,0 +1,165 @@
+@media (min-width: 900px) {
+  body .wrapper header {
+    padding: 3em 4em;
+  }
+  body .wrapper header .logo {
+    max-width: 110px;
+  }
+  body .wrapper header nav .nav__list {
+    margin-bottom: 1em;
+  }
+  body .wrapper header nav .nav__list .nav__list-item {
+    margin-left: 2em;
+  }
+  body .wrapper .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 4em 4em 6em 4em;
+  }
+  body .wrapper .intro .intro__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 50%;
+    max-width: 540px;
+  }
+  body .wrapper .intro .intro-content-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: left;
+    max-width: 550px;
+  }
+  body .wrapper .intro .intro-content-wrapper .intro__desc {
+    padding: 1em 1.5em 1.5em 0;
+  }
+  body .wrapper .intro .intro-content-wrapper .intro__form {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin-left: 0;
+  }
+  body .wrapper .intro .intro-content-wrapper .intro__form .intro__form-input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border-radius: 0.2em;
+  }
+  body .wrapper .intro .intro-content-wrapper .intro__form .intro__form-button {
+    border-radius: 0.2em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 35%;
+            flex: 0 1 35%;
+    margin-left: 1em;
+    margin-top: 0;
+  }
+  body .wrapper .curveBg {
+    display: none;
+  }
+  body .wrapper .curveBgDesktop {
+    width: 100%;
+    display: block;
+  }
+  body .wrapper .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4em 4em 7em 4em;
+  }
+  body .wrapper .services .services__img {
+    width: 45%;
+  }
+  body .wrapper .services .services-content-wrapper {
+    margin-right: 3em;
+  }
+  body .wrapper .services .services-content-wrapper .services__title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1120px) {
+  body .wrapper .services .services-content-wrapper .services__title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  body .wrapper .services .services-content-wrapper .services__desc {
+    text-align: left;
+  }
+  body .wrapper .services .services-content-wrapper .services__desc-link {
+    margin-top: 1em;
+  }
+  body .wrapper .services .services-content-wrapper .services__card {
+    margin-left: 0;
+    max-width: 50%;
+  }
+  body .wrapper .access {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5em 4em;
+    text-align: left;
+  }
+  body .wrapper .access .access-text-wrapper {
+    width: 40%;
+  }
+  body .wrapper .access .access-text-wrapper .access__heading {
+    font-size: 1.6rem;
+  }
+  body .wrapper .access .access-text-wrapper .access__desc {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  body .wrapper .access .access__form {
+    width: 40%;
+    padding: 0;
+  }
+  body .wrapper .access .access__form .access__form-input {
+    padding: 1.2em;
+  }
+  body .wrapper .access .access__form .access__form-button {
+    width: 40%;
+    margin-top: 1em;
+    padding: 1.2em;
+    margin-left: 0;
+  }
+  body .wrapper footer .footer-main {
+    padding: 6em 8em 3em 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=desktop.css.map */
