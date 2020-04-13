@@ -43,6 +43,7 @@ a{
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: $fs-body;
+    -webkit-text-size-adjust: 100%;
 }
 
 h1,h2,header,form{
@@ -109,7 +110,6 @@ h2{
             margin-top: 1.5em;
             font-weight: $fw-bold;
             color: $clr-dark-blue;
-            font-size: $fs-h1;
         }
         .intro__desc{
             padding: 2em 1.5em;
@@ -161,7 +161,6 @@ h2{
         }
         .services__title{
             margin-top: 5em;
-            font-size: $fs-h2;
         }
         @media(min-width: 600px){
             .services__title{

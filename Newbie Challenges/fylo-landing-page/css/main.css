@@ -34,7 +34,8 @@ a {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1, h2, header, form {
@@ -114,7 +115,6 @@ h2 {
   margin-top: 1.5em;
   font-weight: 700;
   color: #070439;
-  font-size: 1.5rem;
 }
 
 .wrapper .intro .intro__desc {
@@ -174,7 +174,6 @@ h2 {
 
 .wrapper .services .services__title {
   margin-top: 5em;
-  font-size: 1.1rem;
 }
 
 @media (min-width: 600px) {
