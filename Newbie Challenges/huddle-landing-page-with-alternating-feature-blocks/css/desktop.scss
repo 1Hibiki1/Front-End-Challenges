@@ -1,0 +1,116 @@
+$fs-h1-l: 1.9rem;
+$fs-h2-l: 1.3rem;
+$fs-body-l: 0.8rem;
+
+@media (min-width: 900px){
+    body{
+        font-size: $fs-body-l;
+        h1{
+            font-size: $fs-h1-l;
+        }
+        .hero{
+            header{
+                padding: 2.5em 3.5em;
+                .logo{
+                    max-width: 130px;
+                }
+                .header__button{
+                    padding: 0.85em 4em;
+                    font-size: 0.7rem;
+                }
+            }
+            .hero-content{
+                padding: 0 2em 3em 2em;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .hero__text{
+                    text-align: left;
+                    margin-top: 0;
+                    max-width: 42%;
+                    .hero__text-desc{
+                        margin-top: 1em;
+                    }
+                }
+                .hero__image{
+                    width: 52%;
+                    max-width: 700px;
+                    margin-top: 0;
+                }
+            }   
+        }//hero
+
+        main{
+            padding: 8em 5em 0 5em;
+            display: flex;
+            flex-direction: column;
+            .card{
+                display: flex;
+                padding: 4em 4em 4em 6em;
+                justify-content: space-between;
+                align-items: center;
+                .card-image{
+                    max-width: 35%;
+                }
+                .card-desc{
+                    text-align: left;
+                    max-width: 47%;
+                    .card-desc__heading{
+                        margin-top: 0;
+                    }
+                    .card-desc__desc{
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+
+            .card-grow, .card-users{
+                flex-direction: row-reverse;
+            }
+
+            .last-card{
+                display: flex;
+                flex-direction: column;
+                margin: 5em auto -5em auto;
+                min-width: 50%;
+                padding: 4em;
+                .last-card-heading{
+                    font-size: 1.3rem;
+                }
+                .card-button-container{
+                    margin-top: 3.5em;
+                    .card-button{
+                        font-size: 0.8rem;
+                        padding: 1.3em 5.5em;
+                    }
+                } 
+            }
+        }//main
+
+        footer{
+            padding-top: 10em;
+            padding-left: 5em;
+            padding-right: 7em;
+            .footer-main{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .footer-main-sec1{
+                    max-width: 30%;
+                }
+                .footer-main__list1{
+                    margin-top: 0;
+                }
+            }//main
+
+            .footer__copy{
+                text-align: right;
+                font-size: 0.7rem;
+            }
+
+            .footer-attribution{
+                margin-top: 5em;
+            }
+        }
+    }
+}
