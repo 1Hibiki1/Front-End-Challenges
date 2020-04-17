@@ -168,6 +168,11 @@ h3 {
   background-size: cover;
 }
 
+.container main .level-section .card .card__proj-prvw-hlpwab {
+  background: url(../images/huddle-landing-page-with-alternating-feature-blocks.png) no-repeat center center;
+  background-size: cover;
+}
+
 .container footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
