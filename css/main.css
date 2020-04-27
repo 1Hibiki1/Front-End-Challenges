@@ -85,6 +85,10 @@ h3 {
   font-weight: 400;
 }
 
+.container main .level-section__heading-next {
+  margin-top: 2em;
+}
+
 .container main .level-section {
   margin-top: 1em;
 }
@@ -171,6 +175,15 @@ h3 {
 .container main .level-section .card .card__proj-prvw-hlpwab {
   background: url(../images/huddle-landing-page-with-alternating-feature-blocks.png) no-repeat center center;
   background-size: cover;
+}
+
+.container main .level-section .card .card__proj-prvw-pti {
+  background: url(../images/project-tracking-intro-component.png) no-repeat center center;
+  background-size: cover;
+}
+
+.container main .level-section .card-junior {
+  background: linear-gradient(340deg, #002afa, #ca03fc 50%);
 }
 
 .container footer {

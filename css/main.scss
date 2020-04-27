@@ -14,6 +14,7 @@ $clr-txt: #fff;
 $clr-vlight-blue: #f2ffff;
 $clr-blue: #002afa;
 $clr-lbluegreen: #00fa9e;
+$clr-purple: #ca03fc;
 
 $fs-body: 1rem;
 $fs-h1: 1.5rem;
@@ -103,6 +104,9 @@ h3{
         .level-section__heading{
             font-weight: $fw-reg;
         }
+        .level-section__heading-next{
+            margin-top: 2em;
+        }
         .level-section{
             margin-top: 1em;
             .card{
@@ -171,7 +175,15 @@ h3{
                     background: url(../images/huddle-landing-page-with-alternating-feature-blocks.png) no-repeat center center;
                     background-size: cover;
                 }
+                .card__proj-prvw-pti{
+                    background: url(../images/project-tracking-intro-component.png) no-repeat center center;
+                    background-size: cover;
+                }
                 //-------------------
+            }
+
+            .card-junior{
+                background: linear-gradient(340deg, $clr-blue, $clr-purple 50%);
             }
         }
     }
